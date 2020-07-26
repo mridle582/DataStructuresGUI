@@ -33,10 +33,5 @@ def window():
     win.show()
     sys.exit(app.exec_())
 
-
 window()
-
-my_array = MyArray([1,2,3], 5)
-my_linkedlist = MyLinkedList(MyNode(1))
-
 

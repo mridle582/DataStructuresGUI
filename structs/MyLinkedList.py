@@ -71,20 +71,3 @@ class MyNode:
         self.parent = None
         self.children = [None]
 
-my_list = MyLinkedList(MyNode(5))
-print(my_list.toString())
-my_list.add(MyNode(4))
-print(my_list.toString())
-my_list.insert(MyNode(3))
-print(my_list.toString())
-print(my_list.cursor.data)
-my_list.remove()
-print(my_list.toString())
-print(my_list.cursor.data)
-my_list.cursor = my_list.cursor.children[0]
-print(my_list.cursor.data)
-my_list.remove()
-print(my_list.toString())
-print(my_list.cursor.data)
-my_list.remove()
-print(my_list.toString())
