@@ -1,5 +1,3 @@
-import array
-
 class MyArray:
 
     def __init__(self, max_size):
@@ -7,7 +5,7 @@ class MyArray:
         self.max_size = max_size
 
     def add(self, value):
-        if (len(self.data)) < (self.max_size):
+        if (len(self.data)) < self.max_size:
             self.data.append(value)
         else:
             print('The list is full.')
@@ -19,11 +17,7 @@ class MyArray:
             print('The list is either full or index entered is out of bounds.')
 
     def remove(self, data):
-        if (len(self.data) > 0):
+        if len(self.data) > 0:
             self.data.remove(data)
         else:
             print('The list is empty.')
-
-#MyData = MyArray([1,2,3], 5)
-
-

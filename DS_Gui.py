@@ -22,10 +22,12 @@ class MyWindow(QMainWindow):
 
     def clicked(self):
         self.label.setText('clicked meh')
-       # self.update()
+
+    # self.update()
 
     def update(self):
         self.label.adjustSize()
+
 
 def window():
     app = QApplication(sys.argv)
@@ -33,5 +35,5 @@ def window():
     win.show()
     sys.exit(app.exec_())
 
-window()
 
+window()
