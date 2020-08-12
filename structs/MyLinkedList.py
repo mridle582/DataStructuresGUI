@@ -5,14 +5,14 @@ class MyLinkedList:
         self.size = 1
 
     def add(self, node):
-        if (self.head is None):
+        if self.head is None:
             self.head = self.tail = self.cursor = node
         else:
             self.tail.children[0] = node
             node.parent = self.tail
             self.tail = node
         self.size += 1
-        
+
     def insert(self, node):
         if self.cursor is None:
             self.head = self.cursor = self.tail = node
@@ -53,15 +53,13 @@ class MyLinkedList:
             self.size -= 1
             return old_cursor
 
-
-    def toString(self):
+    def to_string(self):
         output = '['
         cursor = self.head
         while cursor is not None:
-            output += '(' + str(cursor.data)  + ')'
+            output += cursor.to_string()
             cursor = cursor.children[0]
         return output + ']'
-        
 
 
 class MyNode:
@@ -71,3 +69,10 @@ class MyNode:
         self.parent = None
         self.children = []
 
+    def __init__(self, data, num_children):
+        self.data = data
+        self.parent = None
+        self.children = [None] * num_children
+
+    def to_string(self):
+        return '(' + str(self.data) + ')'
